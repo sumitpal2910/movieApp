@@ -13,8 +13,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.eightbit.blog.fragment.MovieListFragment;
 import com.eightbit.blog.fragment.ProfileFragment;
-import com.eightbit.blog.models.RequestDto;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,11 +48,9 @@ public class MainActivity extends AppCompatActivity {
                         loadFragment(new ProfileFragment());
                         break;
                     case R.id.navMovie:
-                        //
+                        loadFragment(new MovieListFragment());
                         break;
-                    case R.id.navSeries:
-                        //
-                        break;
+
                     case R.id.navLogout:
                         //
                         break;
@@ -88,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            getOnBackPressedDispatcher().onBackPressed();
+//            getOnBackPressedDispatcher().onBackPressed();
+            super.onBackPressed();
         }
     }
 }

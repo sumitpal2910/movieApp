@@ -1,4 +1,4 @@
-package com.eightbit.blog.models;
+package com.eightbit.blog.models.dto;
 
 import java.io.Serializable;
 
